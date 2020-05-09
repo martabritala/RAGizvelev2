@@ -19,3 +19,8 @@ def gatavs():
 def test():
     return data.test_connection()
 
+@app.route('/test1/<ieraksts>')
+def tests1(ieraksts):
+    parametri=(ieraksts,'berziņš',1,1,0, NULL, NULL,NULL,NULL,NULL,NULL,NULL,1,5,7)
+    return ierakstit(parametri)
+
