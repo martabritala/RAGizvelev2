@@ -38,8 +38,8 @@ def ierakstit(parametri):
     conn = psycopg2.connect(dsn)
     cur = conn.cursor()
     sql="""INSERT INTO izvele (vards,uzvards,izvele_id,datori_id,specdebates,specanglit,specfiloz,specpub,specpapangv,specpsih,specrobo,speckrv,padz_id1,padz_id2,padz_id3) 
-        VALUES (%s) RETURNING nrpk;""" 
-    cur.execute(sql,parametri)
+        VALUES ({}) RETURNING nrpk;""" 
+    cur.execute(sql.format(parametri))
     conn.commit()
     cur.close()
     conn.close()
