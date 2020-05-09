@@ -21,7 +21,7 @@ def test():
 
 @app.route('/test1/<ieraksts>')
 def tests1(ieraksts):
-    parametri=(ieraksts,'berziņš',1,1,0,None,None,None,None,None,None,None,1,5,7)
+    parametri=ieraksts +",'berziņš',1,1,0,None,None,None,None,None,None,None,1,5,7,"
     data.ierakstit(parametri)
     return data.test_connection()
 
