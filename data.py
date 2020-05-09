@@ -7,6 +7,8 @@ ELEPHANT_HOST = os.getenv("ELEPHANT_HOST")
 ELEPHANT_NAME = os.getenv("ELEPHANT_NAME")
 ELEPHANT_PASSWORD = os.getenv("ELEPHANT_PASSWORD")
 
+print(ELEPHANT_HOST)
+
 dsn = "host={} dbname={} user={} password={}".format(ELEPHANT_HOST, ELEPHANT_NAME, ELEPHANT_NAME, ELEPHANT_PASSWORD)
 
 def test_connection():
