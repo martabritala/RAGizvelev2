@@ -17,5 +17,5 @@ def gatavs():
 
 @app.route('/test')
 def test():
-    return data.test_connection
+    return data.test_connection()
 
