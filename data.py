@@ -44,3 +44,14 @@ def ierakstit(parametri):
     cur.close()
     conn.close()
     return 
+
+def nolasit(parametri = 0):
+    conn = psycopg2.connect(dsn)
+    cur = conn.cursor()
+    if parametri==0:
+        cur.execute('''SELECT * FROM izvele''')
+    elif parametri.izvele == 1:
+        cur.execute('''SELECT * FROM izvele WHERE nrpk={parametri.teksts}''')
+    else:
+        cur.execute('''SELECT * FROM izvele WHERE uzvards LIKE {parametri.teksts}''')
+    return cur.fetchall()

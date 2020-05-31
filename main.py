@@ -19,6 +19,16 @@ def gatavs():
 def test():
     return data.test_connection()
 
+@app.route('/rezultati')
+def rezultati():
+    return render_template('rezultati.html')
+
+@app.route('/test2/<izvele>/<teksts>')
+def test2(izvele, teksts):
+    rezultats.teksts=teksts
+    rezultats.izvele=izvele
+    return nolasit(rezultats)
+
 @app.route('/test1/<ieraksts>')
 def tests1(ieraksts):
     parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
