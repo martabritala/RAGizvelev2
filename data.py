@@ -56,13 +56,13 @@ def nolasit(parametri = 0):
                for i, value in enumerate(row)) for row in cur.fetchall()]
     elif parametri.izvele == 1:
         numurs = int(parametri.teksts)
-        querry = '''SELECT * FROM izvele WHERE nrpk='{}' '''.format(numurs)
+        querry = '''SELECT * FROM (SELECT izvele.nrpk, izvele.vards, izvele.uzvards, izvele.datums, grozi.nosaukums, datori.datoru_nosaukums, padzilinatie1.padzkurss padzkurss1, padzilinatie2.padzkurss padzkurss2, padzilinatie3.padzkurss padzkurss3, izvele.specdebates, izvele.specanglit, izvele.specfiloz, izvele.specpub, izvele.specpapangv, izvele.specpsih, izvele.specrobo, izvele.speckrv FROM izvele LEFT JOIN grozi ON izvele.izvele_id=grozi.id LEFT JOIN datori ON izvele.datori_id=datori.id LEFT JOIN padzilinatie AS padzilinatie1 ON padz_id1=padzilinatie1.id LEFT JOIN padzilinatie AS padzilinatie2 ON padz_id2=padzilinatie2.id LEFT JOIN padzilinatie AS padzilinatie3 ON padz_id3=padzilinatie3.id ORDER BY nrpk ASC) AS tabula WHERE tabula.nrpk='{}' '''.format(numurs)
         print(querry)
         cur.execute(querry)
         r = [dict((cur.description[i][0], value) \
                for i, value in enumerate(row)) for row in cur.fetchall()]
     else:
-        cur.execute('''SELECT * FROM izvele WHERE uzvards LIKE '{}%' '''.format(parametri.teksts))
+        cur.execute('''SELECT * FROM (SELECT izvele.nrpk, izvele.vards, izvele.uzvards, izvele.datums, grozi.nosaukums, datori.datoru_nosaukums, padzilinatie1.padzkurss padzkurss1, padzilinatie2.padzkurss padzkurss2, padzilinatie3.padzkurss padzkurss3, izvele.specdebates, izvele.specanglit, izvele.specfiloz, izvele.specpub, izvele.specpapangv, izvele.specpsih, izvele.specrobo, izvele.speckrv FROM izvele LEFT JOIN grozi ON izvele.izvele_id=grozi.id LEFT JOIN datori ON izvele.datori_id=datori.id LEFT JOIN padzilinatie AS padzilinatie1 ON padz_id1=padzilinatie1.id LEFT JOIN padzilinatie AS padzilinatie2 ON padz_id2=padzilinatie2.id LEFT JOIN padzilinatie AS padzilinatie3 ON padz_id3=padzilinatie3.id ORDER BY nrpk ASC) AS tabula WHERE tabula.uzvards LIKE '{}%' '''.format(parametri.teksts))
         r = [dict((cur.description[i][0], value) \
                for i, value in enumerate(row)) for row in cur.fetchall()]
     return r
