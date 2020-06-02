@@ -30,6 +30,7 @@ def rezultati():
 
 @app.route('/test2/<izvele1>/<teksts1>')
 def test2(izvele1, teksts1):
+    izvele1=int(izvele1)
     rezultats=objekts(izvele1, teksts1)
     # rezultats.teksts=teksts
     # rezultats.izvele=izvele
