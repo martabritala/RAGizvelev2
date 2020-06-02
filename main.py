@@ -7,6 +7,11 @@ import data
 
 app = Flask('app')
 
+class objekts:
+    def __init__(self, izvele, teksts):
+        self.izvele=izvele
+        self.teksts=teksts
+
 @app.route('/')
 def index_lapa():
     return render_template('index.html')
@@ -23,10 +28,11 @@ def test():
 def rezultati():
     return render_template('rezultati.html')
 
-@app.route('/test2/<izvele>/<teksts>')
-def test2(izvele, teksts):
-    rezultats.teksts=teksts
-    rezultats.izvele=izvele
+@app.route('/test2/<izvele1>/<teksts1>')
+def test2(izvele1, teksts1):
+    rezultats=objekts(izvele1, teksts1)
+    # rezultats.teksts=teksts
+    # rezultats.izvele=izvele
     return nolasit(rezultats)
 
 @app.route('/test1/<ieraksts>')
