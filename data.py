@@ -51,7 +51,10 @@ def nolasit(parametri = 0):
     if parametri==0:
         cur.execute('''SELECT * FROM izvele''')
     elif parametri.izvele == 1:
-        cur.execute('''SELECT * FROM izvele WHERE nrpk={parametri.teksts}''')
+        numurs = int(parametri.teksts)
+        querry = '''SELECT * FROM izvele WHERE nrpk='{}' '''.format(numurs)
+        print(querry)
+        cur.execute(querry)
     else:
-        cur.execute('''SELECT * FROM izvele WHERE uzvards LIKE '{parametri.teksts}%' ''')
+        cur.execute('''SELECT * FROM izvele WHERE uzvards LIKE '{}%' '''.format(parametri.teksts))
     return cur.fetchall()
