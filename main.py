@@ -26,14 +26,14 @@ def test():
 
 @app.route('/rezultati')
 def rezultati():
-    return data.nolasit()
+    return ''.join(map(str,data.nolasit()))
 
 @app.route('/test2/<izvele1>/<teksts1>')
 def test2(izvele1, teksts1):
     rezultats=objekts(izvele1, teksts1)
     # rezultats.teksts=teksts
     # rezultats.izvele=izvele
-    return data.nolasit(rezultats)
+    return ''.join(map(str,data.nolasit(rezultats)))
 
 @app.route('/test1/<ieraksts>')
 def tests1(ieraksts):
