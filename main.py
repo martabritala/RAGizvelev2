@@ -26,7 +26,7 @@ def test():
 
 @app.route('/rezultati')
 def rezultati():
-    return render_template('rezultati.html')
+    return data.nolasit()
 
 @app.route('/test2/<izvele1>/<teksts1>')
 def test2(izvele1, teksts1):
