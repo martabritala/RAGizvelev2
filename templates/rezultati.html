@@ -36,10 +36,13 @@
     </div>
           <!-- rezultātu vieta -->
       <div id="rezultati">
-        {%for linija in linijas%}
-        <p>{{linija}}</p>
+        {%for linija in linijas %}
+        <p>
+          {% for vards in linija %}
+            {{vards}}
+          {% endfor %}
+        </p>
         {% endfor %}
-        <p>{{linijas}}</p>
 
       </div>  
 
