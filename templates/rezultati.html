@@ -39,7 +39,7 @@
         {%for linija in linijas %}
         <p>
           {% for vards in linija %}
-            {{vards}}
+            {{linija[vards]}}
           {% endfor %}
         </p>
         {% endfor %}
