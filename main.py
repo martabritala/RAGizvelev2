@@ -33,7 +33,7 @@ def test2(izvele1, teksts1):
     rezultats=objekts(izvele1, teksts1)
     # rezultats.teksts=teksts
     # rezultats.izvele=izvele
-    return nolasit(rezultats)
+    return data.nolasit(rezultats)
 
 @app.route('/test1/<ieraksts>')
 def tests1(ieraksts):
