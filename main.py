@@ -26,7 +26,8 @@ def test():
 
 @app.route('/rezultati')
 def rezultati():
-    return render_template('rezultati.html')
+    rezultats=''.join(map(str,data.nolasit()))
+    return render_template('rezultati.html', linijas=rezultats)
 
 @app.route('/test2/<izvele1>/<teksts1>')
 def test2(izvele1, teksts1):
