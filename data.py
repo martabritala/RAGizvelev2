@@ -54,12 +54,15 @@ def nolasit(parametri = 0):
         cur.execute(kverijs)
         r = [dict((cur.description[i][0], value) \
                for i, value in enumerate(row)) for row in cur.fetchall()]
-        return r
     elif parametri.izvele == 1:
         numurs = int(parametri.teksts)
         querry = '''SELECT * FROM izvele WHERE nrpk='{}' '''.format(numurs)
         print(querry)
         cur.execute(querry)
+        r = [dict((cur.description[i][0], value) \
+               for i, value in enumerate(row)) for row in cur.fetchall()]
     else:
         cur.execute('''SELECT * FROM izvele WHERE uzvards LIKE '{}%' '''.format(parametri.teksts))
-    return cur.fetchall()
+        r = [dict((cur.description[i][0], value) \
+               for i, value in enumerate(row)) for row in cur.fetchall()]
+    return r
