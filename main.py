@@ -24,7 +24,7 @@ def gatavs():
 def test():
     return data.test_connection()
 
-@app.route('/rezultati', methods=[POST, GET])
+@app.route('/rezultati', methods=['POST', 'GET'])
 def rezultati():
     if request.method == POST:
         ManaIzvele=int(request.form[izvele])
