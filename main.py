@@ -24,9 +24,15 @@ def gatavs():
 def test():
     return data.test_connection()
 
-@app.route('/rezultati')
+@app.route('/rezultati', methods=[POST, GET])
 def rezultati():
-    rezultats=data.nolasit()
+    if request.method == POST:
+        ManaIzvele=int(request.form[izvele])
+        MansTeksts=request.form[teksts]
+        MansObjekts=objekts(ManaIzvele,MansTeksts)
+        rezultats=data.nolasit(MansObjekts)
+    else:
+        rezultats=data.nolasit()
     return render_template('rezultati.html', linijas=rezultats)
 
 @app.route('/test2/<izvele1>/<teksts1>')
