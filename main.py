@@ -50,5 +50,5 @@ def tests1(ieraksts):
     return data.test_connection()
 
 @app.errorhandler(500)
-def servererror():
+def servererror(pars=0):
     return redirect('/rezultati')
