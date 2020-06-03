@@ -1,7 +1,7 @@
 import datetime
 import os
 import psycopg2
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request
 import data
 # from boto.s3.connection import S3Connection
 
@@ -26,9 +26,9 @@ def test():
 
 @app.route('/rezultati', methods=['POST', 'GET'])
 def rezultati():
-    if request.method == POST:
-        ManaIzvele=int(request.form[izvele])
-        MansTeksts=request.form[teksts]
+    if request.method == 'POST':
+        ManaIzvele=int(request.form['izvele'])
+        MansTeksts=request.form['teksts']
         MansObjekts=objekts(ManaIzvele,MansTeksts)
         rezultats=data.nolasit(MansObjekts)
     else:
