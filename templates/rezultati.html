@@ -39,7 +39,11 @@
         {%for linija in linijas %}
         <p>
           {% for vards in linija %}
-            {{linija[vards]}}
+            {% if linija[vards] == None %}
+              <b>Tukšs</b>
+            {% else %}
+              {{linija[vards]}}
+            {% endif %}
           {% endfor %}
         </p>
         {% endfor %}
