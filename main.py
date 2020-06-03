@@ -1,7 +1,7 @@
 import datetime
 import os
 import psycopg2
-from flask import Flask, g, render_template, request
+from flask import Flask, g, render_template, request, redirect
 import data
 # from boto.s3.connection import S3Connection
 
@@ -49,3 +49,6 @@ def tests1(ieraksts):
     data.ierakstit(parametri)
     return data.test_connection()
 
+@app.errorhandler(500)
+def servererror():
+    return redirect('/rezultati')
