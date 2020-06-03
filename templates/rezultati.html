@@ -36,18 +36,40 @@
     </div>
           <!-- rezultātu vieta -->
       <div id="rezultati">
-        {%for linija in linijas %}
-        <p>
-          {% for vards in linija %}
-            {% if linija[vards] == None %}
-              <b>Tukšs</b>
-            {% else %}
-              {{linija[vards]}}
-            {% endif %}
+        <table>
+          <tr>
+            <th>Nr.</th>
+            <th>Vārds</th>
+            <th>Uzvārds</th>
+            <th>Laiks</th>
+            <th>Izvēlētā programma</th>
+            <th>Datori (11.klasē)</th>
+            <th>1. padziļinātais kurss</th>
+            <th>2. padziļinātais kurss</th>
+            <th>3. padziļinātais kurss</th>
+            <th>Debates</th>
+            <th>Angļu literatūra</th>
+            <th>Filozofija</th>
+            <th>Publiskā runa</th>
+            <th>Papildu angļu valoda</th>
+            <th>Psiholoģija</th>
+            <th>Robotika</th>
+            <th>Krievu valoda</th>
+          </tr>
+          {%for linija in linijas %}
+          <tr>
+            {% for vards in linija %}
+            <td>
+              {% if linija[vards] == None %}
+                Nav vēl izvēlējies
+              {% else %}
+                {{linija[vards]}}
+              {% endif %}
+            </td>
+            {% endfor %}
+          </tr>
           {% endfor %}
-        </p>
-        {% endfor %}
-
+        </table>
       </div>  
 
 
