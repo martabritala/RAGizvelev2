@@ -7,10 +7,10 @@ import data
 
 app = Flask('app')
 
-class objekts:
-    def __init__(self, izvele, teksts):
-        self.izvele=izvele
-        self.teksts=teksts
+# class objekts:
+#     def __init__(self, izvele, teksts):
+#         self.izvele=izvele
+#         self.teksts=teksts
 
 @app.route('/')
 def index_lapa():
@@ -24,24 +24,7 @@ def gatavs():
 def test():
     return data.test_connection()
 
-@app.route('/rezultati', methods=['POST', 'GET'])
-def rezultati():
-    if request.method == 'POST':
-        ManaIzvele=int(request.form['izvele'])
-        MansTeksts=request.form['teksts']
-        MansObjekts=objekts(ManaIzvele,MansTeksts)
-        rezultats=data.nolasit(MansObjekts)
-    else:
-        rezultats=data.nolasit()
-    return render_template('rezultati.html', linijas=rezultats)
 
-@app.route('/test2/<izvele1>/<teksts1>')
-def test2(izvele1, teksts1):
-    izvele1=int(izvele1)
-    rezultats=objekts(izvele1, teksts1)
-    # rezultats.teksts=teksts
-    # rezultats.izvele=izvele
-    return ''.join(map(str,data.nolasit(rezultats)))
 
 @app.route('/test1/<ieraksts>')
 def tests1(ieraksts):
@@ -49,6 +32,3 @@ def tests1(ieraksts):
     data.ierakstit(parametri)
     return data.test_connection()
 
-@app.errorhandler(500)
-def servererror(pars=0):
-    return redirect('/rezultati')
