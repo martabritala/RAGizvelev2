@@ -34,7 +34,7 @@ class Tests3 {
         this.maziasinfo.classList.add("absolute-bottom");
         this.maziasinfo.setAttribute("id","infovieta");
         this.divSkaidro.appendChild(this.maziasinfo);
-
+        this.InfoUrl=statiskaisInfoUrl;
         
 
 
@@ -170,7 +170,7 @@ class Tests3 {
 
     infoIzveide(){
         for(let i in this.linijuInfo){
-            this.tabulaLiela.rows[i].cells[0].innerHTML+="   <img id='img"+i+"' src='"+statiskaisInfoUrl+"'>"
+            this.tabulaLiela.rows[i].cells[0].innerHTML+="   <img id='img"+i+"' src='"+this.InfoUrl+"'>"
             document.getElementById("img"+i).style.height="1.5em";
             document.getElementById("img"+i).style.cursor="pointer";
             document.getElementById("img"+i).onmouseleave = () => this.resetInfo();
