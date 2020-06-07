@@ -819,6 +819,7 @@ class Tests3 {
         pogaGatavs.classList.add("btn","btn-success");
         forma.appendChild(pogaGatavs);
         divForma.appendChild(forma);
+        document.body.appendChild(divForma);
     }
 
     obligataIzvele(nr){
