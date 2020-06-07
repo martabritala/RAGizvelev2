@@ -790,7 +790,7 @@ class Tests3 {
         forma.appendChild(labelKrievu);
         let divtresaval = document.createElement("div");
         divtresaval.id = "tresavaloda";
-        divtresaval.display=none;
+        divtresaval.display="none";
         divtresaval.innerHTML="<h4> Izvēlieties trešo svešvalodu:</h4><br>";
         let tresaValoda = document.createElement("input");
         tresaValoda.type = "radio";
