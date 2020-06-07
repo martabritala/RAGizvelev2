@@ -1,6 +1,6 @@
 class Gatavs {
     constructor(masivs){
-        for (i=0;i<masivs.length;i++){
+        for (let i=0;i<masivs.length;i++){
             document.getElementById("rez"+masivs[i]).style.display="hidden"
             console.log(masivs[i])
         }
