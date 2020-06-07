@@ -2,11 +2,17 @@
     <script type="text/javascript" src="{{url_for('static',filename='gatavs.js')}}"></script>
 </head>
 <body>
-    <p>Iesniedzēja vārds, uzvārds: <!--##{{!!!!!!!}}--></p>
+    <p>Iesniedzēja vārds, uzvārds: {{vards}} {{uzvards}}></p>
     <h3>Izvēlētā programma:
-        <!--## {%if%}
-
-        ##{%endif%} -->
+        {% if programma=1%}
+            Dabaszinātnes A
+        {%elif programma=2%}
+            Dabaszinātnes B
+        {%elif programma=3%}
+            Eiropas studijas ar 3. svešvalodu
+        {%else%}
+            Eiropas studijas bez 3. svešvalodas
+        {%endif%}
     </h3>
     <div>
         <table>
@@ -260,12 +266,12 @@
     </div>
     <div>
         <h4>Pašlaik izvēlēto kursu stundu skaits nedēļā:</h4>
-        <p>10. klasē: <!--#{{!!!!!!!}}--> stundas. Līdz <span style="color: red;">?datums?</span> vēl iespējams izvēlēties speckursus {{!!!!}} stundu apjomā 10. klasei.</p>
-        <p>11. klasē: <!--#{{!!!!!!!}}--> stundas.</p>
-        <p>12. klasē: <!--#{{!!!!!!!}}--> stundas.</p>
+        <p>10. klasē: {{klase10}} stundas. Līdz <span style="color: red;">?datums?</span> vēl iespējams izvēlēties speckursus {{!!!!}} stundu apjomā 10. klasei.</p>
+        <p>11. klasē: {{klase11}} stundas.</p>
+        <p>12. klasē: {{klase12}} stundas.</p>
     </div>
     <script type="text/javascript">
-        // palaist(#{{masivs|tojson}})
+        //palaist({{masivs|tojson}})
     </script>
     <button onclick="iesniegt()">Iesniegt manu izvēli!</button>
 </body>
