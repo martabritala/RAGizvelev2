@@ -816,7 +816,7 @@ class Tests3 {
         let pogaGatavs = document.createElement("input");
         pogaGatavs.type = "submit";
         pogaGatavs.value = "Iesniegt izvēli";
-        pogaGatavs.classList.add("btn btn-success");
+        pogaGatavs.classList.add("btn","btn-success");
         forma.appendChild(pogaGatavs);
         divForma.appendChild(forma);
     }
