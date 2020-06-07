@@ -9,5 +9,5 @@ class Gatavs {
 
 function palaist(jsonmasivs){
 
-    g = new Gatavs(jsonmasivs)
+    const g = new Gatavs(jsonmasivs)
 }
