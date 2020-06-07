@@ -1,5 +1,5 @@
 class Tests3 {
-    constructor(id){
+    constructor(id, statiskaisInfoUrl){
         this.konteiners=document.getElementById(id);
         this.saturs=document.createElement("div");
         this.saturs.setAttribute("class","container-fluid");
@@ -170,7 +170,7 @@ class Tests3 {
 
     infoIzveide(){
         for(let i in this.linijuInfo){
-            this.tabulaLiela.rows[i].cells[0].innerHTML+="   <img id='img"+i+"' src=\".\\info_logo.png\">"
+            this.tabulaLiela.rows[i].cells[0].innerHTML+="   <img id='img"+i+"' src='"+statiskaisInfoUrl+"'>"
             document.getElementById("img"+i).style.height="1.5em";
             document.getElementById("img"+i).style.cursor="pointer";
             document.getElementById("img"+i).onmouseleave = () => this.resetInfo();

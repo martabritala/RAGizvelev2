@@ -12,7 +12,7 @@
     <script type="text/javascript" src="{{url_for('static',filename='tests4.js')}}"></script>
     <script type="text/javascript" charset="UTF-8">
         window.onload = () => {
-          const s = new Tests3("konteiners");
+          const s = new Tests3("konteiners", {{url_for('static',filename='info_logo.png')}});
         }
     </script>
   </head>
