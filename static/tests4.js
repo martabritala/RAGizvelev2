@@ -749,7 +749,76 @@ class Tests3 {
     }
 
     popupins(){
-        console.log("ir izdarits!")
+        console.log("ir izdarits!");
+        let divForma = document.createElement("div");
+        divForma.id="popupforma";
+        divForma.classList.add("form-popup");
+        let forma = document.createElement("form");
+        forma.action="./gatavs";
+        forma.classList.add("form-container");
+        forma.method="POST";
+        let vardaVieta = document.createElement("input");
+        vardaVieta.type = "text";
+        vardaVieta.name = "vards";
+        vardaVieta.placeholder = "Vārds";
+        forma.appendChild(vardaVieta);
+        let uzvardaVieta = document.createElement("input");
+        uzvardaVieta.type = "text";
+        uzvardaVieta.name = "uzvards";
+        uzvardaVieta.placeholder = "Uzvārds";
+        forma.appendChild(uzvardaVieta);
+        forma.innerHTML+="<br><h4> Izvēlieties otro svešvalodu:</h4><br>";
+        let otraValoda = document.createElement("input");
+        otraValoda.type = "radio";
+        otraValoda.name = "otraval";
+        otraValoda.value = "72";
+        otraValoda.id="otraVacu";
+        forma.appendChild(otraValoda);
+        let labelVacu = document.createElement("label");
+        labelVacu.setAttribute("for","otraVacu");
+        labelVacu.innerHTML="Vācu valoda";
+        forma.appendChild(labelVacu);
+        let otraValodaKr = document.createElement("input");
+        otraValodaKr.type = "radio";
+        otraValodaKr.name = "otraval";
+        otraValodaKr.value = "73";
+        otraValodaKr.id="otraKrievu";
+        forma.appendChild(otraValodaKr);
+        let labelKrievu = document.createElement("label");
+        labelKrievu.setAttribute("for","otraKrievu");
+        labelKrievu.innerHTML="Krievu valoda";
+        forma.appendChild(labelKrievu);
+        let divtresaval = document.createElement("div");
+        divtresaval.id = "tresavaloda";
+        divtresaval.display=none;
+        divtresaval.innerHTML="<h4> Izvēlieties trešo svešvalodu:</h4><br>";
+        let tresaValoda = document.createElement("input");
+        tresaValoda.type = "radio";
+        tresaValoda.name = "tresaval";
+        tresaValoda.value = "71";
+        tresaValoda.id = "tresaFrancu";
+        divtresaval.appendChild(tresaValoda);
+        let labelFrancu3 = document.createElement("label");
+        labelFrancu3.setAttribute("for","tresaFrancu");
+        labelFrancu3.innerHTML="Franču valoda";
+        divtresaval.appendChild(labelFrancu3);
+        let tresaValodaV = document.createElement("input");
+        tresaValodaV.type = "radio";
+        tresaValodaV.name = "tresaval";
+        tresaValodaV.value = "72";
+        tresaValodaV.id = "tresaVacu";
+        divtresaval.appendChild(tresaValodaV);
+        let labelVacu3 = document.createElement("label");
+        labelVacu3.setAttribute("for","tresaVacu");
+        labelVacu3.innerHTML="Vācu valoda";
+        divtresaval.appendChild(labelVacu3);
+        forma.appendChild(divtresaval);
+        let pogaGatavs = document.createElement("input");
+        pogaGatavs.type = "submit";
+        pogaGatavs.value = "Iesniegt izvēli";
+        pogaGatavs.classList.add("btn btn-success");
+        forma.appendChild(pogaGatavs);
+        divForma.appendChild(forma);
     }
 
     obligataIzvele(nr){
