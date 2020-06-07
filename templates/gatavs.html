@@ -2,7 +2,7 @@
     <script type="text/javascript" src="{{url_for('static',filename='gatavs.js')}}"></script>
 </head>
 <body>
-    <p>Iesniedzēja vārds, uzvārds: {{vards}} {{uzvards}}></p>
+    <h2>Iesniedzēja vārds, uzvārds: {{vards}} {{uzvards}}</h2>
     <h3>Izvēlētā programma:
         {% if programma==1%}
             Dabaszinātnes A
@@ -15,14 +15,14 @@
         {%endif%}
     </h3>
     <div>
-        <table>
+        <table class="table">
             <tr>
                 <th>Nosaukums</th>
                 <th>10.klase</th>
                 <th>11.klase</th>
                 <th>12.klase</th>
             </tr>
-            <tr>
+            <tr class="font-weight-bolder">
                 <td>Vispārīgā līmeņa pamatkursi</td>
             </tr>
             <tr id="rezotra1">
@@ -73,7 +73,7 @@
                 <td>3</td>
                 <td>3</td>
             </tr>
-            <tr>
+            <tr class="font-weight-bolder">
                 <td>Optimālā līmeņa pamatkursi</td>
             </tr>
             <tr>
@@ -148,7 +148,7 @@
                 <td>2</td>
                 <td>4</td>
             </tr>
-            <tr>
+            <tr class="font-weight-bolder">
                 <td>Augstākā līmeņa padziļinātie kursi</td>
             </tr>
             <tr id="rez27">
@@ -205,7 +205,7 @@
                 <td></td>
                 <td>2</td>
             </tr>
-            <tr>
+            <tr class="font-weight-bolder">
                 <td>Specializētie kursi</td>
             </tr>
             <tr id="rez18">

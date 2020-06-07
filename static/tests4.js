@@ -166,6 +166,14 @@ class Tests3 {
         r.cells[3].innerHTML=36-(this.stundas12+6*(3-this.padzilinatoSkaits));
 
         this.infoIzveide();
+
+        let izvelesPoga = document.createElement("button");
+        izvelesPoga.innerHTML="Esmu veicis izvēli";
+        izvelesPoga.onclick = () => this.popupins();
+        izvelesPoga.setAttribute("class", "btn-danger");
+        this.teksts.appendChild(izvelesPoga);
+
+
     }
 
     infoIzveide(){
@@ -738,6 +746,10 @@ class Tests3 {
 
     izdaritaIzvele(nr){
         this.divSkaidro.childNodes[0].innerHTML="Jūs esat izvēlējušies programmu: <br />"+this.virzienuNosaukumi[nr];
+    }
+
+    popupins(){
+        console.log("ir izdarits!")
     }
 
     obligataIzvele(nr){

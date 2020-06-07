@@ -11,3 +11,7 @@ function palaist(jsonmasivs){
     console.log(jsonmasivs)
     const g = new Gatavs(jsonmasivs)
 }
+
+function iesniegt(){
+    console.log("iesniegt")
+}
