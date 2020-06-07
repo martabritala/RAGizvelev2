@@ -8,6 +8,6 @@ class Gatavs {
 }
 
 function palaist(jsonmasivs){
-
+    console.log(jsonmasivs)
     const g = new Gatavs(jsonmasivs)
 }
