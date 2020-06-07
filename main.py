@@ -18,7 +18,7 @@ def index_lapa():
 
 @app.route('/gatavs')
 def gatavs():
-    return render_template('gatavs.html')
+    return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs='{masivs:viens}')
 
 @app.route('/test')
 def test():
