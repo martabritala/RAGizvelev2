@@ -16,9 +16,12 @@ app = Flask('app')
 def index_lapa():
     return render_template('index.html')
 
-@app.route('/gatavs')
+@app.route('/gatavs', methods=['POST', 'GET'])
 def gatavs():
-    return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs=[30,18,13])
+    if request.method=='POST':
+        return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs=[30,18,13])
+    else:
+        return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs=[30,18,13])
 
 @app.route('/test')
 def test():
