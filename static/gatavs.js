@@ -13,5 +13,7 @@ function palaist(jsonmasivs){
 }
 
 function iesniegt(){
+    window.alert("Jūsu kods ir 22222");
+    window.open("https://rag.lv")
     console.log("iesniegt")
 }
