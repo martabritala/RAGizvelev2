@@ -171,7 +171,7 @@ class Tests3 {
         izvelesPoga.innerHTML="Esmu veicis izvēli";
         izvelesPoga.onclick = () => this.popupins();
         izvelesPoga.setAttribute("class", "btn-danger");
-        this.teksts.appendChild(izvelesPoga);
+        this.divSkaidro.appendChild(izvelesPoga);
 
 
     }
@@ -752,7 +752,7 @@ class Tests3 {
         console.log("ir izdarits!");
         let divForma = document.createElement("div");
         divForma.id="popupforma";
-        divForma.classList.add("fixed-bottom","row");
+        divForma.classList.add("fixed-bottom","row","bg-info");
         divForma.appendChild(document.createElement("div"));
         divForma.children[0].classList.add("col-6")
         let forma = document.createElement("form");
@@ -822,7 +822,8 @@ class Tests3 {
         forma.appendChild(pogaGatavs);
         let pogaNavGatavs = document.createElement("button");
         pogaNavGatavs.onclick = () => this.dzestFormu();
-        pogaNavGatavs.classList.add("btn","btn-danger"); 
+        pogaNavGatavs.classList.add("btn","btn-danger");
+        pogaNavGatavs.innerHTML="Atgriezties pie izvēles"; 
         forma.appendChild(pogaNavGatavs);
         divForma.appendChild(forma);
         document.body.appendChild(divForma);
