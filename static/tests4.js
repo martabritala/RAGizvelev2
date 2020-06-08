@@ -824,7 +824,23 @@ class Tests3 {
         pogaNavGatavs.onclick = () => this.dzestFormu();
         pogaNavGatavs.classList.add("btn","btn-danger");
         pogaNavGatavs.innerHTML="Atgriezties pie izvēles"; 
+        let papilduInfo = document.createElement("input");
+        papilduInfo.type="hidden";
+        papilduInfo.id="masivs";
+        papilduInfo.name="izvele";
+        let rezultats=[];
+        for (let i=13; i<42; i++){
+            if(document.getElementById("izvele"+i)&&document.getElementById("izvele"+i).selectedIndex==1){
+                rezultats.push(i);
+            }
+            else if (document.getElementById("izvele"+i)&&document.getElementById("izvele"+i).selectedIndex==2){
+                rezultats.push(0-i);
+            };
+        };
+        papilduInfo.value=rezultats;
+        console.log(rezultats);
         forma.appendChild(pogaNavGatavs);
+        forma.appendChild(papilduInfo);
         divForma.appendChild(forma);
         document.body.appendChild(divForma);
     }
