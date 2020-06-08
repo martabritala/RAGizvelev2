@@ -818,8 +818,16 @@ class Tests3 {
         pogaGatavs.value = "Iesniegt izvēli";
         pogaGatavs.classList.add("btn","btn-success");
         forma.appendChild(pogaGatavs);
+        let pogaNavGatavs = document.createElement("button");
+        pogaNavGatavs.onclick = () => this.dzestFormu();
+        pogaNavGatavs.classList.add("btn","btn-danger"); 
+        forma.appendChild(pogaNavGatavs);
         divForma.appendChild(forma);
         document.body.appendChild(divForma);
+    }
+
+    dzestFormu(){
+        document.getElementById("popupforma").remove();
     }
 
     obligataIzvele(nr){
