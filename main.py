@@ -20,7 +20,7 @@ def index_lapa():
 def gatavs():
     if request.method=='POST':
         stundas = request.form.getlist('stunduskaits[]')
-        stundas.split(',')
+        stundas[0].split(',')
         print(stundas)
         print(request.form.getlist('izvele[]'))
         print(request.form)
