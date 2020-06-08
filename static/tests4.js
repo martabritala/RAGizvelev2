@@ -829,7 +829,7 @@ class Tests3 {
         let papilduInfo = document.createElement("input");
         papilduInfo.type="hidden";
         papilduInfo.id="masivs";
-        papilduInfo.name="izvele";
+        papilduInfo.name="izvele[]";
         let rezultats=[];
         for (let i=13; i<42; i++){
             if(document.getElementById("izvele"+i)&&document.getElementById("izvele"+i).selectedIndex==1){
@@ -852,7 +852,7 @@ class Tests3 {
         let stunduskaiti = document.createElement("input");
         stunduskaiti.type="hidden";
         stunduskaiti.id="dazadiskaiti";
-        stunduskaiti.name="stunduskaits";
+        stunduskaiti.name="stunduskaits[]";
         stunduskaiti.value=[this.stundas10,this.stundas11,this.stundas12];
         forma.appendChild(stunduskaiti);
         divForma.appendChild(forma);

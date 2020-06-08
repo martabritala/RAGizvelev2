@@ -19,7 +19,7 @@ def index_lapa():
 @app.route('/gatavs', methods=['POST', 'GET'])
 def gatavs():
     if request.method=='POST':
-        return render_template('gatavs.html', stunduskaits=request.form['stunduskaits'], vards=request.form['vards'], uzvards=request.form['uzvards'], programma=request.form['programma'], masivs=request.form['rezultats'])
+        return render_template('gatavs.html', stunduskaits=request.form['stunduskaits[]'], vards=request.form['vards'], uzvards=request.form['uzvards'], programma=request.form['programma'], masivs=request.form['izvele[]'])
     else:
         return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs=[30,18,13])
 
