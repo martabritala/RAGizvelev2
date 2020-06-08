@@ -23,7 +23,7 @@ def gatavs():
         print(stundas[0])
         stundas = stundas[0].split(',')
         for elem in stundas:
-            elem = int(elem)
+            stundas[elem] = int(stundas[elem])
         print(stundas)
         print(request.form.getlist('izvele[]'))
         print(request.form)
