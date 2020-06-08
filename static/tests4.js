@@ -1,5 +1,6 @@
 class Tests3 {
     constructor(id, statiskaisInfoUrl){
+        this.izvelesNr=0;
         this.konteiners=document.getElementById(id);
         this.saturs=document.createElement("div");
         this.saturs.setAttribute("class","container-fluid");
@@ -745,6 +746,7 @@ class Tests3 {
     }
 
     izdaritaIzvele(nr){
+        this.izvelesNr=nr;
         this.divSkaidro.childNodes[0].innerHTML="Jūs esat izvēlējušies programmu: <br />"+this.virzienuNosaukumi[nr];
     }
 
@@ -838,9 +840,21 @@ class Tests3 {
             };
         };
         papilduInfo.value=rezultats;
+        let izveleir = document.createElement("input");
+        izveleir.type="hidden";
+        izveleir.id="grozainputs";
+        izveleir.name = "programma";
+        izveleir.value= this.izvelesNr;
         console.log(rezultats);
         forma.appendChild(pogaNavGatavs);
         forma.appendChild(papilduInfo);
+        forma.appendChild(izveleir);
+        let stunduskaiti = document.createElement("input");
+        stunduskaiti.type="hidden";
+        stunduskaiti.id="dazadiskaiti";
+        stunduskaiti.name="stunduskaits";
+        stunduskaiti.value=[this.stundas10,this.stundas11,this.stundas12];
+        forma.appendChild(stunduskaiti);
         divForma.appendChild(forma);
         document.body.appendChild(divForma);
     }
