@@ -752,12 +752,12 @@ class Tests3 {
         console.log("ir izdarits!");
         let divForma = document.createElement("div");
         divForma.id="popupforma";
-        divForma.classList.add("fixed-bottom","row","bg-info");
+        divForma.classList.add("fixed-bottom","row");
         divForma.appendChild(document.createElement("div"));
         divForma.children[0].classList.add("col-6")
         let forma = document.createElement("form");
         forma.action="./gatavs";
-        forma.classList.add("form-container","col-6");
+        forma.classList.add("form-container","col-6","bg-info");
         forma.method="POST";
         let vardaVieta = document.createElement("input");
         vardaVieta.type = "text";
