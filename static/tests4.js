@@ -826,6 +826,7 @@ class Tests3 {
             tresaValoda.type="hidden";
             tresaValoda.name="tresaval";
             tresaValoda.value = "72"; 
+            divtresaval.appendChild(tresaValoda);
         }
         forma.appendChild(divtresaval);
         let pogaGatavs = document.createElement("input");
