@@ -8,12 +8,12 @@ class Gatavs {
 }
 
 function palaist(jsonmasivs){
-    console.log(jsonmasivs)
+    console.log(jsonmasivs, "palaist")
     const g = new Gatavs(jsonmasivs)
 }
 
 function iesniegt(){
-    window.alert("Jūsu kods ir 22222");
+    window.alert("Iesniegums iesniegts veiksmīgi. Paldies.");
     window.open("https://rag.lv")
     console.log("iesniegt")
 }
