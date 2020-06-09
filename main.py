@@ -28,7 +28,7 @@ def gatavs():
         print(stundas)
         print(request.form.getlist('izvele[]'))
         print(request.form)
-        return render_template('gatavs.html', stunduskaits=stundas, vards=request.form['vards'], uzvards=request.form['uzvards'], programma=request.form['programma'], masivs=request.form.getlist('izvele[]'))
+        return render_template('gatavs.html', klase10=int(stundas[0]), klase11=int(stundas[1]), klase12=int(stundas[2]), vards=request.form['vards'], uzvards=request.form['uzvards'], programma=request.form['programma'], masivs=request.form.getlist('izvele[]'))
     else:
         return render_template('gatavs.html', klase10=32, klase11=30, klase12=18, vards='Jānis', uzvards='Bērziņš', programma=1, masivs=[30,18,13])
 
