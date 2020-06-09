@@ -1,7 +1,11 @@
 class Gatavs {
     constructor(masivs){
         for (let i=0;i<masivs.length;i++){
-            document.getElementById("rez"+masivs[i]).style.display="none"
+            if(masivs[i]<0){
+                document.getElementById("rez"+masivs[i]).style.display="none"
+            } else if (masivs[i]>0){
+                document.getElementById("rez"+masivs[i]).style.display="inherit"
+            } 
             console.log(masivs[i])
         }
     }
@@ -9,7 +13,8 @@ class Gatavs {
 
 function palaist(jsonmasivs){
     console.log(jsonmasivs, "palaist")
-    const g = new Gatavs(jsonmasivs)
+    let masivs = jsonmasivs[0].split(",")
+    const g = new Gatavs(masivs)
 }
 
 function iesniegt(){
