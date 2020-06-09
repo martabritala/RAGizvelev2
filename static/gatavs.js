@@ -1,16 +1,16 @@
 class Gatavs {
     constructor(masivs, tresa, otra){
         if(otra=='72'){
-            document.getElementById("rezotra73").style.display="hidden"
+            document.getElementById("rezotra73").style.display="none"
         } else {
-            document.getElementById("rezotra72").style.display="hidden"
+            document.getElementById("rezotra72").style.display="none"
         }
         for (let i=0;i<masivs.length;i++){
             if(masivs[i]=='19'){
                 if(tresa=='72'){
-                    document.getElementById("reztresa71").style.display="hidden"
+                    document.getElementById("reztresa71").style.display="none"
                 } else {
-                    document.getElementById("reztresa72").style.display="hidden"
+                    document.getElementById("reztresa72").style.display="none"
                 }
             }else if(masivs[i]=='-19'){
                 document.getElementById("reztresa71").style.display="none";
@@ -18,7 +18,7 @@ class Gatavs {
             }else if(masivs[i]<0){
                 document.getElementById("rez"+(0-masivs[i])).style.display="none";
             }else if (masivs[i]>0){
-                document.getElementById("rez"+masivs[i]).style.display="inherit";
+                continue;
             } 
             console.log(masivs[i])
         }
