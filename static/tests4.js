@@ -751,7 +751,6 @@ class Tests3 {
     }
 
     popupins(){
-        console.log("ir izdarits!");
         let divForma = document.createElement("div");
         divForma.id="popupforma";
         divForma.classList.add("fixed-bottom","row");
@@ -761,6 +760,7 @@ class Tests3 {
         forma.action="./gatavs";
         forma.classList.add("form-container","col-6","bg-info");
         forma.method="POST";
+        forma.innerHTML+="<h4> Vārds, Uzvārds:</h4><br>";
         let vardaVieta = document.createElement("input");
         vardaVieta.type = "text";
         vardaVieta.name = "vards";
@@ -771,6 +771,11 @@ class Tests3 {
         uzvardaVieta.name = "uzvards";
         uzvardaVieta.placeholder = "Uzvārds";
         forma.appendChild(uzvardaVieta);
+        forma.innerHTML+="<br><h4> Iestājeksāmena numurs:</h4>";
+        let numuraVieta = document.createElement("input");
+        numuraVieta.type = "number";
+        numuraVieta.name = "ExNr";
+        forma.appendChild(numuraVieta);
         forma.innerHTML+="<br><h4> Izvēlieties otro svešvalodu:</h4><br>";
         let otraValoda = document.createElement("input");
         otraValoda.type = "radio";
