@@ -2,7 +2,7 @@ class Gatavs {
     constructor(masivs){
         for (let i=0;i<masivs.length;i++){
             if(masivs[i]<0){
-                document.getElementById("rez"+masivs[i]).style.display="none"
+                document.getElementById("rez"+(0-masivs[i])).style.display="none"
             } else if (masivs[i]>0){
                 document.getElementById("rez"+masivs[i]).style.display="inherit"
             } 
