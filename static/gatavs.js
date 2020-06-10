@@ -1,5 +1,7 @@
 class Gatavs {
-    constructor(masivs, tresa, otra){
+    constructor(){
+    }
+    ielikt(masivs, tresa, otra){
         if(otra=='72'){
             document.getElementById("rezotra73").style.display="none"
         } else {
@@ -23,15 +25,22 @@ class Gatavs {
             console.log(masivs[i])
         }
     }
+    nosutitDatus(){
+        console.log("suta datus")
+    }
 }
+
+let gatavais = new Gatavs();
 
 function palaist(jsonmasivs, tresa, otra){
     console.log(jsonmasivs, "palaist")
     let masivs = jsonmasivs[0].split(",")
-    const g = new Gatavs(masivs, tresa, otra)
+    gatavais.ielikt(masivs, tresa, otra)
 }
 
+
 function iesniegt(){
+    gatavais.nosutitDatus();
     window.alert("Iesniegums iesniegts veiksmīgi. Paldies.");
     window.open("https://rag.lv")
     console.log("iesniegt")
