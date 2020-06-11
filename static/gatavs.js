@@ -71,78 +71,78 @@ class Gatavs {
                 }
                 if (masivs[i]>33 || masivs[i]<-33){
                     switch (masivs[i]){
-                        case 3410:
+                        case '3410':
                             document.getElementById('rezspec34').style.display="";
                             document.getElementById('spec3410').innerHTML=2;
                             this.debates=10;
                             break;
-                        case 3411:
+                        case '3411':
                             document.getElementById('rezspec34').style.display="";
                             document.getElementById('spec3411').innerHTML=2;
                             this.debates=11;
                             break;
-                        case 3412:
+                        case '3412':
                             document.getElementById('rezspec34').style.display="";
                             document.getElementById('spec3412').innerHTML=2;
                             this.debates=12;
                             break;
-                        case 35:
+                        case '35':
                             document.getElementById('rezspec35').style.display="";
                             this.anglit=1;
                             break;
-                        case 36:
+                        case '36':
                             document.getElementById('rezspec36').style.display="";
                             this.filoz=1;
                             break;
-                        case 3710:
+                        case '3710':
                             document.getElementById('rezspec37').style.display="";
                             document.getElementById('spec3710').innerHTML=2;
                             this.publ=10;
                             break;
-                        case 3711:
+                        case '3711':
                             document.getElementById('rezspec37').style.display="";
                             document.getElementById('spec3711').innerHTML=2;
                             this.publ=11;
                             break;
-                        case 3712:
+                        case '3712':
                             document.getElementById('rezspec37').style.display="";
                             document.getElementById('spec3712').innerHTML=2;
                             this.publ=12;
                             break;
-                        case 38:
+                        case '38':
                             document.getElementById('rezspec38').style.display="";
                             this.papang=1;
                             break;
-                        case 39:
+                        case '39':
                             document.getElementById('rezspec39').style.display="";
                             this.psih=1;
                             break;
-                        case 4010:
+                        case '4010':
                             document.getElementById('rezspec40').style.display="";
                             document.getElementById('spec4010').innerHTML=2;
                             this.robo=10;
                             break;
-                        case 4011:
+                        case '4011':
                             document.getElementById('rezspec40').style.display="";
                             document.getElementById('spec4011').innerHTML=2;
                             this.robo=11;
                             break;
-                        case 4012:
+                        case '4012':
                             document.getElementById('rezspec40').style.display="";
                             document.getElementById('spec4012').innerHTML=2;
                             this.robo=12;
                             break;
-                        case 4110:
+                        case '4110':
                             document.getElementById('rezspec41').style.display="";
                             document.getElementById('spec4110').innerHTML=4;
                             this.krv=10;
                             break;
-                        case 4111:
+                        case '4111':
                             document.getElementById('rezspec41').style.display="";
                             document.getElementById('spec4111').innerHTML=4;
                             this.krv=11;
                             break;
-                        case 4112:
+                        case '4112':
                             document.getElementById('rezspec41').style.display="";
                             document.getElementById('spec4112').innerHTML=4;
                             this.krv=12;
