@@ -24,7 +24,12 @@ class Gatavs {
         this.tresa=tresa;
         this.vards = vards;
         this.uzvards = uzvards;
-        this.programma = programma;
+        if (programma == 4){
+            this.programma=20;
+        }
+        if(programma == 3 || programma == 1){
+            this.programma=programma*10;
+        }
         this.exNr = numurs;
         if(otra=='72'){
             document.getElementById("rezotra73").style.display="none"
@@ -53,6 +58,9 @@ class Gatavs {
                 }
                 document.getElementById("rez"+(0-masivs[i])).style.display="none";
             }else if (masivs[i]>0){
+                if(programma==2 && masivs[i]<17){
+                    this.programma=masivs[i]-2;
+                }
                 if (masivs[i]=='25'){
                     document.getElementById("mat25").innerHTML="";
                 }
