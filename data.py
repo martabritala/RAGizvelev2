@@ -44,7 +44,7 @@ def ierakstit(parametri):
     conn.commit()
     cur.close()
     conn.close()
-    return 
+    return test_connection()
 
 def nolasit(parametri = 0):
     conn = psycopg2.connect(dsn)
