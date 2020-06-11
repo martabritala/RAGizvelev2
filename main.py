@@ -36,7 +36,9 @@ def gatavs():
 def test():
     return data.test_connection()
 
-
+@app.route('/beigas')
+def beigas():
+    return redirect('https://www.rag.lv/')
 
 @app.route('/suutiit', methods=['POST'])
 def suutiit():
@@ -44,5 +46,5 @@ def suutiit():
     # vards=request.
     # parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
     # data.ierakstit(parametri)
-    return redirect('https://www.rag.lv/')
+    return data.test_connection()
 

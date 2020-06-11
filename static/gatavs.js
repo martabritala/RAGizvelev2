@@ -49,6 +49,6 @@ function palaist(jsonmasivs, tresa, otra){
 function iesniegt(){
     gatavais.nosutitDatus();
     window.alert("Iesniegums iesniegts veiksmīgi. Paldies.");
-    // window.open("https://rag.lv")
+    window.location.replace("/beigas")
     console.log("iesniegt")
 }
