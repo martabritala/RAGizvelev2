@@ -69,7 +69,7 @@ class Gatavs {
                         this.padz3=masivs[i]-24;
                     }
                 }
-                if (masivs[i]>33){
+                if (masivs[i]>33 || masivs[i]<-33){
                     switch (masivs[i]){
                         case 3410:
                             document.getElementById('rezspec34').style="";
