@@ -1,23 +1,23 @@
 class Gatavs {
     constructor(){
-        this.tresa = 0;
+        this.tresa = "NULL";
         this.otra = 0;
-        this.vards = "";
-        this.uzvards = "";
+        this.vards = "NULL";
+        this.uzvards = "NULL";
         this.programma = 0;
-        this.datori="";
+        this.datori="NULL";
         this.exNr = 0;
-        this.padz1 = 0;
-        this.padz2 = 0;
-        this.padz3 = 0;
-        this.krv=0;
-        this.papang=0;
-        this.debates=0;
-        this.robo=0;
-        this.anglit=0;
-        this.filoz=0;
-        this.publ=0;
-        this.psih=0;
+        this.padz1 = "NULL";
+        this.padz2 = "NULL";
+        this.padz3 = "NULL";
+        this.krv="NULL";
+        this.papang="NULL";
+        this.debates="NULL";
+        this.robo="NULL";
+        this.anglit="NULL";
+        this.filoz="NULL";
+        this.publ="NULL";
+        this.psih="NULL";
     }
     ielikt(masivs, tresa, otra, vards, uzvards, programma, numurs){
         this.otra=otra;
