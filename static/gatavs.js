@@ -21,7 +21,6 @@ class Gatavs {
     }
     ielikt(masivs, tresa, otra, vards, uzvards, programma, numurs){
         this.otra=otra;
-        this.tresa=tresa;
         this.vards = vards;
         this.uzvards = uzvards;
         if (programma == 4){
@@ -38,6 +37,7 @@ class Gatavs {
         }
         for (let i=0;i<masivs.length;i++){
             if(masivs[i]=='19'){
+                this.tresa=tresa;
                 if(tresa=='72'){
                     document.getElementById("reztresa71").style.display="none"
                 } else {
