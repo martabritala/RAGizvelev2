@@ -1,6 +1,7 @@
 import datetime
 import os
 import psycopg2
+from json import loads
 from flask import Flask, g, render_template, request, redirect
 import data
 # from boto.s3.connection import S3Connection
@@ -42,7 +43,7 @@ def beigas():
 
 @app.route('/suutiit', methods=['POST'])
 def suutiit():
-    parametri="'{vards}','{uzvards}',{programma},{datori},{debates},{anglit},{filoz},{publ},{papang},{psih},{robo},{krv},{padz1},{padz2},{padz3},{otraval},{tresaval},{exnumurs}".format(**request.json.loads)
+    parametri="'{vards}','{uzvards}',{programma},{datori},{debates},{anglit},{filoz},{publ},{papang},{psih},{robo},{krv},{padz1},{padz2},{padz3},{otraval},{tresaval},{exnumurs}".format(**loads(request.json))
     data.ierakstit(parametri)
     return data.test_connection()
 
