@@ -5,7 +5,11 @@ class Gatavs {
         this.vards = "";
         this.uzvards = "";
         this.programma = 0;
+        this.datori="";
         this.exNr = 0;
+        this.padz1 = 0;
+        this.padz2 = 0;
+        this.padz3 = 0;
     }
     ielikt(masivs, tresa, otra, vards, uzvards, programma, numurs){
         this.otra=otra;
@@ -13,7 +17,7 @@ class Gatavs {
         this.vards = vards;
         this.uzvards = uzvards;
         this.programma = programma;
-        this.exNr = numurs
+        this.exNr = numurs;
         if(otra=='72'){
             document.getElementById("rezotra73").style.display="none"
         } else {
@@ -30,15 +34,54 @@ class Gatavs {
                 document.getElementById("reztresa71").style.display="none";
                 document.getElementById("reztresa72").style.display="none";
             }else if(masivs[i]<0){
+                if(masivs[i]=='-25'){
+                    document.getElementById("mat25").innerHTML=3;
+                }
+                if(masivs[i]=='-22'){
+                    this.datori==-22;
+                }
+                if(masivs[i]=='-23' && this.datori==-22){
+                    this.datori==0;
+                }
                 document.getElementById("rez"+(0-masivs[i])).style.display="none";
             }else if (masivs[i]>0){
-                continue;
+                if (masivs[i]=='25'){
+                    document.getElementById("mat25").innerHTML="";
+                }
+                if (masivs[i]=='22' || masivs[i]=='23'){
+                    this.datori=masivs[i]-21;
+                    console.log(this.datori);
+                }
+                if (masivs[i]>=25 && masivs[i]<=32){
+                    if(this.padz1==0){
+                        this.padz1=masivs[i]-24;
+                    } else if (this.padz2==0){
+                        this.padz2=masivs[i]-24;
+                    } else if (this.padz3==0){
+                        this.padz3=masivs[i]-24;
+                    }
+                }
+                if (masivs[i]>33){
+
+                }
             } 
             console.log(masivs[i])
         }
     }
     nosutitDatus(){
-        let data = {vards: this.vards, uzvards: this.uzvards, programma: this.programma, otraval: this.otra, tresaval: this.tresa, exnumurs: this.exNr};
+        let data = {
+            vards: this.vards, 
+            uzvards: this.uzvards, 
+            programma: this.programma, 
+            otraval: this.otra, 
+            tresaval: this.tresa, 
+            exnumurs: this.exNr,
+            datori: this.datori,
+            padz1:this.padz1,
+            padz2:this.padz2,
+            padz3:this.padz3
+        };
+        console.log(JSON.stringify(data));
         fetch("/suutiit", {
         method: "POST", 
         headers: {
