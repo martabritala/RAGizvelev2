@@ -1,7 +1,19 @@
 class Gatavs {
     constructor(){
+        this.tresa = 0;
+        this.otra = 0;
+        this.vards = "";
+        this.uzvards = "";
+        this.programma = 0;
+        this.exNr = 0;
     }
-    ielikt(masivs, tresa, otra){
+    ielikt(masivs, tresa, otra, vards, uzvards, programma, numurs){
+        this.otra=otra;
+        this.tresa=tresa;
+        this.vards = vards;
+        this.uzvards = uzvards;
+        this.programma = programma;
+        this.exNr = numurs
         if(otra=='72'){
             document.getElementById("rezotra73").style.display="none"
         } else {
@@ -26,7 +38,7 @@ class Gatavs {
         }
     }
     nosutitDatus(){
-        let data = {element: "barium"};
+        let data = {vards: this.vards, uzvards: this.uzvards, programma: this.programma, otraval: this.otra, tresaval: this.tresa, exnumurs: this.exNr};
         fetch("/suutiit", {
         method: "POST", 
         headers: {
@@ -42,10 +54,10 @@ class Gatavs {
 
 let gatavais = new Gatavs();
 
-function palaist(jsonmasivs, tresa, otra){
+function palaist(jsonmasivs, tresa, otra, vards, uzvards, programma, exNumurs){
     console.log(jsonmasivs, "palaist")
     let masivs = jsonmasivs[0].split(",")
-    gatavais.ielikt(masivs, tresa, otra)
+    gatavais.ielikt(masivs, tresa, otra, vards, uzvards, programma, exNumurs)
 }
 
 
