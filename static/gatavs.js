@@ -1,6 +1,6 @@
 class Gatavs {
     constructor(){
-        this.tresa = "NULL";
+        this.tresa = 70;
         this.otra = 0;
         this.vards = "NULL";
         this.uzvards = "NULL";
