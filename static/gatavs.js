@@ -29,6 +29,9 @@ class Gatavs {
         let data = {element: "barium"};
         fetch("/suutiit", {
         method: "POST", 
+        headers: {
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify(data)
         }).then(res => {
         console.log("Request complete! response:", res);
