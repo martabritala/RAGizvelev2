@@ -174,7 +174,6 @@ class Gatavs {
             robo:this.robo,
             krv:this.krv
         };
-        console.log(JSON.stringify(data));
         fetch("/suutiit", {
         method: "POST", 
         headers: {
