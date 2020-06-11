@@ -40,9 +40,9 @@ def test():
 
 @app.route('/suutiit', methods=['POST'])
 def suutiit():
-    print("nezinu")
+    print(request.json)
     # vards=request.
     # parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
     # data.ierakstit(parametri)
-    return data.test_connection()
+    return redirect('https://rag.lv')
 
