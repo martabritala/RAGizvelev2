@@ -26,6 +26,13 @@ class Gatavs {
         }
     }
     nosutitDatus(){
+        let data = {element: "barium"};
+        fetch("/suutiit", {
+        method: "POST", 
+        body: JSON.stringify(data)
+        }).then(res => {
+        console.log("Request complete! response:", res);
+        });
         console.log("suta datus")
     }
 }

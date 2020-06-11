@@ -38,9 +38,11 @@ def test():
 
 
 
-@app.route('/test1/<ieraksts>')
-def tests1(ieraksts):
-    parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
-    data.ierakstit(parametri)
+@app.route('/suutiit', methods=['POST'])
+def suutiit():
+    print("nezinu")
+    # vards=request.
+    # parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
+    # data.ierakstit(parametri)
     return data.test_connection()
 

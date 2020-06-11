@@ -172,6 +172,8 @@ class Tests3 {
         izvelesPoga.innerHTML="Esmu veicis izvēli";
         izvelesPoga.onclick = () => this.popupins();
         izvelesPoga.setAttribute("class", "btn-danger");
+        izvelesPoga.id="izvelesPoga";
+        izvelesPoga.disabled=true;
         this.divSkaidro.appendChild(izvelesPoga);
 
 
@@ -746,6 +748,9 @@ class Tests3 {
     }
 
     izdaritaIzvele(nr){
+        if(nr!=0){
+            document.getElementById("izvelesPoga").disabled=false;
+        };
         this.izvelesNr=nr;
         this.divSkaidro.childNodes[0].innerHTML="Jūs esat izvēlējušies programmu: <br />"+this.virzienuNosaukumi[nr];
     }
