@@ -41,7 +41,7 @@ class Gatavs {
             }else if(masivs[i]=='-19'){
                 document.getElementById("reztresa71").style.display="none";
                 document.getElementById("reztresa72").style.display="none";
-            }else if(masivs[i]<0){
+            }else if(masivs[i]<0 && masivs[i]>-34){
                 if(masivs[i]=='-25'){
                     document.getElementById("mat25").innerHTML=3;
                 }
