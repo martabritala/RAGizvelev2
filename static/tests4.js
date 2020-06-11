@@ -849,6 +849,9 @@ class Tests3 {
         papilduInfo.name="izvele[]";
         let rezultats=[];
         for (let i=13; i<42; i++){
+            if(i==34||i==37||i==40||i==41){
+                rezultats.push(i*100+document.getElementById("izvele"+i).selectedIndex+9)
+            }
             if(document.getElementById("izvele"+i)&&document.getElementById("izvele"+i).selectedIndex==1){
                 rezultats.push(i);
             }
