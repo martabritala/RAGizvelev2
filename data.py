@@ -38,7 +38,7 @@ def test_connection():
 def ierakstit(parametri):
     conn = psycopg2.connect(dsn)
     cur = conn.cursor()
-    sql="""INSERT INTO izvele (vards,uzvards,izvele_id,datori_id,specdebates,specanglit,specfiloz,specpub,specpapangv,specpsih,specrobo,speckrv,padz_id1,padz_id2,padz_id3) 
+    sql="""INSERT INTO izvele (vards,uzvards,izvele_id,datori_id,specdebates,specanglit,specfiloz,specpub,specpapangv,specpsih,specrobo,speckrv,padz_id1,padz_id2,padz_id3,otra_valoda,tresa_valoda,eksamena_nr) 
         VALUES ({}) RETURNING nrpk;""" 
     cur.execute(sql.format(parametri))
     conn.commit()

@@ -42,9 +42,7 @@ def beigas():
 
 @app.route('/suutiit', methods=['POST'])
 def suutiit():
-    print(request.json)
-    # vards=request.
-    # parametri="'{}','berziņš',1,1,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,5,7".format(ieraksts)
-    # data.ierakstit(parametri)
+    parametri="'{vards}','{uzvards}',{programma},{datori},{debates},{anglit},{filoz},{publ},{papang},{psih},{robo},{krv},{padz1},{padz2},{padz3},{otraval},{tresaval},{exnumurs}".format(request.json)
+    data.ierakstit(parametri)
     return data.test_connection()
 
