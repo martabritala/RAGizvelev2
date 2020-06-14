@@ -10,8 +10,8 @@
                     Lūdzu pārbaudiet, vai iesniegtā informācija ir pareiza! 
                 </div>
                 <div class="row"> 
-                    <h2>Iesniedzēja vārds, uzvārds: {{vards}} {{uzvards}}</h2>
-                    <h3>Izvēlētā programma:
+                    <h2>Iesniedzēja vārds, uzvārds: <br> {{vards}} {{uzvards}}</h2>
+                    <h3>Izvēlētā programma:<br>
                         {% if programma=='1'%}
                             Dabaszinātnes A
                         {%elif programma=='2'%}
@@ -22,6 +22,7 @@
                             Eiropas studijas bez 3. svešvalodas
                         {%endif%}
                     </h3>
+                    <h4> Eksāmena numurs: {{numurs}}</h4>
                 </div>
             </div>
             <div class="col-5">
