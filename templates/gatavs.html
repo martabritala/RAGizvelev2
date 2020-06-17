@@ -26,7 +26,7 @@
                             Eiropas studijas bez 3. svešvalodas
                         {%endif%}
                         </div>
-                    </h3>
+                    </h3> <br>
                     <h4> Eksāmena numurs: <div class="border border-success rounded-pill text-center"> {{numurs}} </div></h4>
                     <div  class="table-secondary">
                         <h5 class="border">Atzīmētos kursus būs iespējams vēl mācību procesā mainīt.</h5>
@@ -289,7 +289,7 @@
             </div>
             <div class="col-3">
                 <h4>Pašlaik izvēlēto kursu stundu skaits nedēļā:</h4>
-                <p>10. klasē: {{klase10}} stundas. <br>Līdz 01.07.2020. vēl iespējams izvēlēties speckursus {{36-klase10}} stundu apjomā 10. klasei.</p>
+                <p>10. klasē: {{klase10}} stundas. <br><div class="bg-warning font-weight-bolder">Līdz 01.07.2020. vēl iespējams izvēlēties specializētos kursus {{36-klase10}} stundu apjomā 10. klasei.</div></p>
                 <p>11. klasē: {{klase11}} stundas. <br>Tehnoloģiju kursu izvēli būs jāapstiprina 10.klases beigās.</p>
                 <p>12. klasē: {{klase12}} stundas. <br>Padziļināto kursu izvēli būs jāapstiprina 11.klases vidū.</p>
                 <p>Pa visiem gadiem kopā: {{klase10+klase11+klase12}} stundas. <br> <span class="text-info"></span>
@@ -299,8 +299,8 @@
                         Pašlaik izvēlēto stundu skaits atbilst nepieciešamajam.
                     {% endif %} </span>
                 </p>
-                <button onclick="iesniegt()">Iesniegt manu izvēli!</button>
-                <button onclick="window.location.replace('/')">Izmainīt iesniegumu</button>
+                <button onclick="iesniegt()" class="btn-success rounded-lg">Iesniegt manu izvēli!</button>
+                <button onclick="window.location.replace('/')" class="btn-danger rounded-lg">Izmainīt iesniegumu</button>
             </div>
         </div>
     </div>
