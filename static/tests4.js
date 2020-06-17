@@ -749,16 +749,18 @@ class Tests3 {
     }
 
     izdaritaIzvele(nr){
-        if(nr!=0){
-            document.getElementById("izvelesPoga").disabled=false;
-            document.getElementById("izvelesPoga").classList.remove("btn-danger");
-            document.getElementById("izvelesPoga").classList.add("btn-success");
-            document.getElementById("izvelesPoga").innerHTML="Esmu veicis izvēli";
-        } else {
-            document.getElementById("izvelesPoga").disabled=true;
-            document.getElementById("izvelesPoga").classList.remove("btn-success");
-            document.getElementById("izvelesPoga").classList.add("btn-danger");
-            document.getElementById("izvelesPoga").innerHTML="Vēl izvēlos";
+        if(document.getElementById("izvelesPoga")){
+            if(nr!=0){
+                document.getElementById("izvelesPoga").disabled=false;
+                document.getElementById("izvelesPoga").classList.remove("btn-danger");
+                document.getElementById("izvelesPoga").classList.add("btn-success");
+                document.getElementById("izvelesPoga").innerHTML="Esmu veicis izvēli";
+            } else {
+                document.getElementById("izvelesPoga").disabled=true;
+                document.getElementById("izvelesPoga").classList.remove("btn-success");
+                document.getElementById("izvelesPoga").classList.add("btn-danger");
+                document.getElementById("izvelesPoga").innerHTML="Vēl izvēlos";
+            };
         };
         this.izvelesNr=nr;
         this.divSkaidro.childNodes[0].innerHTML="Jūs esat izvēlējušies programmu: <br />"+this.virzienuNosaukumi[nr];
