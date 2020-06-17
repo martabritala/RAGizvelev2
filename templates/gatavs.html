@@ -7,12 +7,15 @@
     <div class="container-fluid m-5">
         <div class="row">
             <div class="col-4">
-                <div class="row table-light">
+                <div class="row ">
                     Lūdzu pārbaudiet, vai iesniegtā informācija ir pareiza! 
                 </div>
                 <div class="row"> 
-                    <h2>Iesniedzēja vārds, uzvārds: <br> {{vards}} {{uzvards}}</h2>
-                    <h3>Izvēlētā programma:<br>
+                    <h2>Iesniedzēja vārds, uzvārds: 
+                        <div class="border border-success rounded-pill"> {{vards}} {{uzvards}}</div>
+                    </h2>
+                    <h3>Izvēlētā programma:
+                        <div class="border border-success rounded-pill">
                         {% if programma=='1'%}
                             Dabaszinātnes A
                         {%elif programma=='2'%}
@@ -22,10 +25,11 @@
                         {%else%}
                             Eiropas studijas bez 3. svešvalodas
                         {%endif%}
+                        </div>
                     </h3>
-                    <h4> Eksāmena numurs: {{numurs}}</h4>
+                    <h4> Eksāmena numurs: <div class="border border-success rounded-pill"> {{numurs}} </div></h4>
                     <div  class="table-secondary">
-                        <h5>Atzīmētos kursus būs iespējams vēl mācību procesā mainīt.</h5>
+                        <h5 class="border">Atzīmētos kursus būs iespējams vēl mācību procesā mainīt.</h5>
                     </div>
                 </div>
             </div>

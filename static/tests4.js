@@ -750,6 +750,8 @@ class Tests3 {
     izdaritaIzvele(nr){
         if(nr!=0){
             document.getElementById("izvelesPoga").disabled=false;
+        } else {
+            document.getElementById("izvelesPoga").disabled=true;
         };
         this.izvelesNr=nr;
         this.divSkaidro.childNodes[0].innerHTML="Jūs esat izvēlējušies programmu: <br />"+this.virzienuNosaukumi[nr];
@@ -769,22 +771,26 @@ class Tests3 {
         let vardaVieta = document.createElement("input");
         vardaVieta.type = "text";
         vardaVieta.name = "vards";
+        vardaVieta.required = true;
         vardaVieta.placeholder = "Vārds";
         forma.appendChild(vardaVieta);
         let uzvardaVieta = document.createElement("input");
         uzvardaVieta.type = "text";
         uzvardaVieta.name = "uzvards";
+        uzvardaVieta.required = true;
         uzvardaVieta.placeholder = "Uzvārds";
         forma.appendChild(uzvardaVieta);
-        forma.innerHTML+="<br><h4>Kombinētā iestājeksāmena kods:</h4>";
+        forma.innerHTML+="<br><h4>Kombinētā iestājeksāmena kods (tikai cipari):</h4>";
         let numuraVieta = document.createElement("input");
         numuraVieta.type = "number";
         numuraVieta.name = "ExNr";
+        numuraVieta.required = true;
         forma.appendChild(numuraVieta);
         forma.innerHTML+="<br><h4> Izvēlieties otro svešvalodu:</h4><br>";
         let otraValoda = document.createElement("input");
         otraValoda.type = "radio";
         otraValoda.name = "otraval";
+        otraValoda.required = true;
         otraValoda.value = "72";
         otraValoda.id="otraVacu";
         forma.appendChild(otraValoda);
@@ -809,6 +815,7 @@ class Tests3 {
             let tresaValoda = document.createElement("input");
             tresaValoda.type = "radio";
             tresaValoda.name = "tresaval";
+            tresaValoda.required = true;
             tresaValoda.value = "71";
             tresaValoda.id = "tresaFrancu";
             divtresaval.appendChild(tresaValoda);
