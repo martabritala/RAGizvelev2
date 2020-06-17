@@ -169,7 +169,7 @@ class Tests3 {
         this.infoIzveide();
 
         let izvelesPoga = document.createElement("button");
-        izvelesPoga.innerHTML="Esmu veicis izvēli";
+        izvelesPoga.innerHTML="Vēl izvēlos";
         izvelesPoga.onclick = () => this.popupins();
         izvelesPoga.setAttribute("class", "btn-danger");
         izvelesPoga.classList.add("rounded-pill")
