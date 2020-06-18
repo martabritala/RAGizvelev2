@@ -767,7 +767,9 @@ class Tests3 {
     }
 
     popupins(){
+        document.getElementById("pleve").style.zIndex=10;
         let divForma = document.createElement("div");
+        divForma.style.zIndex=20;
         divForma.id="popupforma";
         divForma.classList.add("fixed-bottom","row");
         divForma.appendChild(document.createElement("div"));
@@ -897,6 +899,7 @@ class Tests3 {
 
     dzestFormu(){
         document.getElementById("popupforma").remove();
+        document.getElementById("pleve").style.zIndex=-2;
     }
 
     obligataIzvele(nr){
