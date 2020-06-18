@@ -208,6 +208,6 @@ function palaist(jsonmasivs, tresa, otra, vards, uzvards, programma, exNumurs){
 function iesniegt(){
     gatavais.nosutitDatus();
     window.alert("Iesniegums iesniegts veiksmīgi. Paldies.");
-    // window.location.replace("/beigas")
+    window.location.replace("/beigas")
     console.log("iesniegt")
 }
