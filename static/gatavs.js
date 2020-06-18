@@ -69,7 +69,7 @@ class Gatavs {
                     console.log(this.datori);
                 }
                 if (masivs[i]>=25 && masivs[i]<=32){
-                    document.getElementById("rez"+masivs[i]).style.display="flex";
+                    document.getElementById("rez"+masivs[i]).style.display="";
                     if(this.padz1=="NULL"){
                         this.padz1=masivs[i]-24;
                     } else if (this.padz2=="NULL"){
